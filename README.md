@@ -3,16 +3,18 @@
 ## What is this??
 
 Fast installer for [NeoBundle](https://github.com/Shougo/neobundle.vim).
-[NeoBundle](https://github.com/Shougo/neobundle.vim) is a Vim plugin manager.
+NeoBundle is a Vim plugin manager.
 
 ## How to use
 
-If you are not have [NeoBundle](https://github.com/Shougo/neobundle.vim)...
-Please enter below two commands.
+Please enter below just two commands.
 
 ```Bash
 $ git clone git@github.com:shoma2da/neobundle_installer.git
 $ ./neobundle_installer/install.sh
 ```
 
-So, you can use NeoBundle Vim Plugin.
+All are done!
+You can use NeoBundle.
+
+Please look [NeoBundle](https://github.com/Shougo/neobundle.vim) to see how to use.
