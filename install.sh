@@ -1,7 +1,9 @@
 #!/bin/sh
+BUNDLE_DIR=~/.vim/bundle
+
 echo "start fetch NeoBundle..."
-mkdir -p ~/.vim/bundle
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+mkdir -p $BUNDLE_DIR
+git clone https://github.com/Shougo/neobundle.vim $BUNDLE_DIR/neobundle.vim
 echo "done."
 
 echo "start write NeoBundle initial setting to ~/.vimrc ..."
@@ -13,11 +15,11 @@ echo "start write NeoBundle initial setting to ~/.vimrc ..."
     echo "  set nocompatible               \" Be iMproved"
     echo ""
     echo "  \" Required:"
-    echo "  set runtimepath+=~/.vim/bundle/neobundle.vim/"
+    echo "  set runtimepath+=$BUNDLE_DIR/neobundle.vim/"
     echo "endif"
     echo ""
     echo "\" Required:"
-    echo "call neobundle#rc(expand('~/.vim/bundle/'))"
+    echo "call neobundle#rc(expand('$BUNDLE_DIR'))"
     echo ""
     echo "\" Let NeoBundle manage NeoBundle"
     echo "\" Required:"
