@@ -1,4 +1,4 @@
-# NeoBunlde Installer
+# NeoBundle Installer
 
 ## What is this??
 
