@@ -2,6 +2,14 @@
 BUNDLE_DIR=~/.vim/bundle
 VIMRC_PATH=~/.vimrc
 
+# check git command
+if type git; then
+  : # You have git command. No Problem.
+else
+  echo 'Please install git command!'
+  exit 1;
+fi
+
 # make bundle dir and fetch neobundle
 echo "start fetch NeoBundle..."
 mkdir -p $BUNDLE_DIR
