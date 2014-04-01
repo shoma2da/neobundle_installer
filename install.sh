@@ -1,12 +1,13 @@
 #!/bin/sh
 BUNDLE_DIR=~/.vim/bundle
+VIMRC_PATH=~/.vimrc
 
 echo "start fetch NeoBundle..."
 mkdir -p $BUNDLE_DIR
 git clone https://github.com/Shougo/neobundle.vim $BUNDLE_DIR/neobundle.vim
 echo "done."
 
-echo "start write NeoBundle initial setting to ~/.vimrc ..."
+echo "start write NeoBundle initial setting to ${VIMRC_PATH} ..."
 {
     echo ""
     echo ""
@@ -26,7 +27,14 @@ echo "start write NeoBundle initial setting to ~/.vimrc ..."
     echo "NeoBundleFetch 'Shougo/neobundle.vim'"
     echo ""
     echo "\" My Bundles here:"
-    echo "\" (Sample is) NeoBundle 'Shougo/neosnippet.vim'"
+    echo "NeoBundle 'Shougo/neosnippet.vim'"
+    echo "NeoBundle 'Shougo/neosnippet-snippets'"
+    echo "NeoBundle 'tpope/vim-fugitive'"
+    echo "NeoBundle 'kien/ctrlp.vim'"
+    echo "NeoBundle 'flazz/vim-colorschemes'"
+    echo ""
+    echo "\" You can specify revision/branch/tag."
+    echo "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }"
     echo ""
     echo "\" Required:"
     echo "filetype plugin indent on"
@@ -37,7 +45,7 @@ echo "start write NeoBundle initial setting to ~/.vimrc ..."
     echo "\"End NeoBundle Scripts-------------------------"
     echo ""
     echo ""
-} >> ~/.vimrc
+} >> ${VIMRC_PATH}
 echo "done."
 
 echo "complete setup NeoBundle!"
