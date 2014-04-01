@@ -2,11 +2,13 @@
 BUNDLE_DIR=~/.vim/bundle
 VIMRC_PATH=~/.vimrc
 
+# make bundle dir and fetch neobundle
 echo "start fetch NeoBundle..."
 mkdir -p $BUNDLE_DIR
 git clone https://github.com/Shougo/neobundle.vim $BUNDLE_DIR/neobundle.vim
 echo "done."
 
+# write initial setting for .vimrc
 echo "start write NeoBundle initial setting to ${VIMRC_PATH} ..."
 {
     echo ""
@@ -48,6 +50,7 @@ echo "start write NeoBundle initial setting to ${VIMRC_PATH} ..."
 } >> ${VIMRC_PATH}
 echo "done."
 
+# open neobundle official page.
 echo "complete setup NeoBundle!"
 echo "open NeoBundle github page. enjoy!!"
 open https://github.com/Shougo/neobundle.vim
